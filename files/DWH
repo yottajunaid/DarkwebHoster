@@ -1,7 +1,7 @@
 #!/bin/bash
 main() {
 clear
-curl -sSL https://github.com/yottajunaid/DarkwebHoster/blob/main/files/logo.txt | cat
+curl -sSL https://github.com/yottajunaid/DarkwebHoster/raw/main/files/logo.txt | cat
 printf "\a\a
 [1] Host a website on darkweb
 [2] Follow Developer
