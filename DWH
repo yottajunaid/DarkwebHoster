@@ -1,0 +1,56 @@
+#!/bin/bash
+main() {
+clear
+curl -sSL https://github.com/yottajunaid/DarkwebHoster/raw/main/files/logo.txt | cat
+printf "\a\a
+[1] Host a website on darkweb
+[2] Follow Developer
+[0] Exit The Tool
+"
+read -p "(L2O)> Choose : " choise
+
+
+if [[ $choise = 1 ]]; then
+  printf "\n\e[31mWelcome to the world of Darkweb! Take a dive into the Deep corners\e[0m\n" | pv -qL 15
+  darkweb
+elif [[ $choise = 2 ]]; then
+  Follow
+#elif [[ $choise = 3 ]]; then
+#  msg
+elif [[ $choise = 0 ]]; then
+echo "Thanks for using Make sure you follow YOTTAJUNAID on Github!!" | pv -qL 10
+exit
+fi
+}
+
+darkweb(){
+  read -p "(DarkWeb)> Enter site folder dir/path  : " dsite
+  if [[ -d $dsite ]]; then
+    echo starting localhost server on your Android
+    php -S localhost:8080 -t $dsite > /dev/null 2>&1 &
+    sleep 3
+    echo -e "\nGenerating link" | pv -qL 5
+    sleep 2
+    printf "\v\e[0;11mYour link = \e[34mhttp://"
+    echo You can also access on your Browser on http://localhost:8080
+    cat $PREFIX/var/lib/tor/hidden_service/hostname
+    printf "\v\v\e[36mMake sure you've run tor in termux in a new tab to access this onion link\e[0m\n"
+  else
+    printf "\nDirectory does not exists!!...try again\n\n"
+    sleep 2 ; darkweb
+  fi
+}
+netcheck(){
+  ping -c 1 google.com > /dev/null 2>&1 
+  if [[ "$?" != '0' ]]; then
+    echo -e "\e[31mRun tor on your termux in a new tab!!!"
+    sleep 2 ; exit
+    
+  fi
+}
+Follow(){
+  xdg-open https://github.com/yottajunaid
+}
+
+netcheck
+main
