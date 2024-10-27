@@ -7,7 +7,7 @@ printf "\a\a
 [2] Follow Developer
 [0] Exit The Tool
 "
-read -p "(L2O)> Choose : " choise
+read -p ">>> Choose : " choise
 
 
 if [[ $choise = 1 ]]; then
