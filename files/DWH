@@ -32,8 +32,8 @@ darkweb(){
     echo -e "\nGenerating link" | pv -qL 5
     sleep 2
     printf "\v\e[0;11mYour link = \e[34mhttp://"
-    echo You can also access on your Browser on http://localhost:8080
     cat $PREFIX/var/lib/tor/hidden_service/hostname
+    echo You can also access on your Browser on http://localhost:8080
     printf "\v\v\e[36mMake sure you've run tor in termux in a new tab to access this onion link\e[0m\n"
   else
     printf "\nDirectory does not exists!!...try again\n\n"
