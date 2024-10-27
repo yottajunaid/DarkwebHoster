@@ -1,10 +1,10 @@
-# DarkwebHoster
+![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=DarkwebHoster%20&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Follow%20me%20on%20GitHub%20by%20@YOTTAJUNAID&descAlignY=51&descAlign=62)
+
+# DarkwebHoster 👻👻👻
 👻 An Awesome tool to convert your localhost into a Darkweb Server 💀💀💀
 
 
 ---
-
-# DarkwebHoster 👻👻👻
 
 **DarkwebHoster** is a streamlined and powerful tool for Termux, specifically designed to allow users to host `.onion` websites on the dark web using the Tor network. With a simple installation process and minimal prerequisites, **DarkwebHoster** aims to make dark web hosting accessible, secure, and efficient for Android users.
 
